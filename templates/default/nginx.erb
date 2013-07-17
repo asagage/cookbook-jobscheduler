@@ -1,0 +1,12 @@
+server {
+  listen 0.0.0.0:<%= @port %>;
+  server_name <%= @host %>;
+  
+  # individual nginx logs for this jobscheduler vhost
+  access_log  /var/log/nginx/jobscheduler_access.log;
+  error_log   /var/log/nginx/jobscheduler_error.log;
+
+  location / {
+    proxy_pass http://localhost:4444;
+  }
+}
