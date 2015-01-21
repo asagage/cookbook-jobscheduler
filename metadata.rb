@@ -16,3 +16,8 @@ end
 %w{debian ubuntu}.each do |os|
   supports os
 end
+
+depends 'mysql_chef_gem', '~> 2.0.2'
+depends 'mysql', '~> 6.0'
+depends 'sudo'
+depends 'users'

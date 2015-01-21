@@ -36,6 +36,7 @@ template File.join(jobs['path'], 'jobscheduler_install.xml') do
   })
 end
 
+#sudo -u #{jobs['user']} ./jobscheduler.#{jobs['version']}/setup.sh ./jobscheduler_install.xml
 execute "jobscheduler install" do
   command <<-EOS
     tar xzf jobscheduler_#{jobs['platform']}.#{jobs['version']}.tar.gz

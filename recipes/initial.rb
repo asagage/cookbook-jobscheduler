@@ -13,7 +13,7 @@ end
 
 # Packages / Dependencies
 include_recipe "apt" if platform?("ubuntu", "debian")
-include_recipe "yum::epel" if platform?("centos")
+include_recipe "yum-epel" if platform?("centos")
 
 
 # Java
@@ -34,8 +34,10 @@ user jobs['user'] do
 end
 
 ## SUDO
-group "sudo" do
-  members jobs['user']
-  append true
-  action :modify
-end
+include_recipe 'sudo::default'
+
+#group "sudo" do
+#  members jobs['user']
+#  append true
+#  action :modify
+#end
