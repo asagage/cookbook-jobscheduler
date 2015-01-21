@@ -22,7 +22,7 @@ Chef to install The [SOS JobScheduler](http://www.sos-berlin.com/modules/cjaycon
 ### Platform:
 
 * Ubuntu (12.04, 12.10)
-* CentOS ... Not implemented yet
+* CentOS 6.5
 
 
 ## Attributes
@@ -111,7 +111,7 @@ Example of node config.
 
 ## Done!
 
-`http://localhost:8080/` or your server for `JobScheduler Operatios Centre`.
+`http://localhost:8080/` or your server for `JobScheduler Operations Center`.
 
 
 ## Links
